@@ -1,0 +1,136 @@
+<mxfile host="Electron" modified="2024-06-22T11:22:09.921Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="hmeH8mf3pEudLIDpULnb" version="24.4.8" type="device">
+  <diagram name="Страница — 1" id="LDDiV4sWsg-1LrhXazHE">
+    <mxGraphModel dx="2074" dy="1214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_H8PyPT_IZnhRKHFAVXN-1" value="Пользователь" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="620" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_H8PyPT_IZnhRKHFAVXN-2" value="Запустить программу" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="610" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_H8PyPT_IZnhRKHFAVXN-3" target="_H8PyPT_IZnhRKHFAVXN-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_H8PyPT_IZnhRKHFAVXN-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="1" vertex="1">
+          <mxGeometry x="140" y="641" width="60" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-2" value="Запустить таймер&lt;div&gt;работы&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="610" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-4" value="Остановить таймер&lt;div&gt;работы&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="687" y="520" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0V17vzB8R0esJhWpNjQI-5" target="0V17vzB8R0esJhWpNjQI-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-5" value="Дождаться окончания таймера работы" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="750" y="615" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-7" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.008;exitY=0.66;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.932;entryY=0.169;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-4" target="0V17vzB8R0esJhWpNjQI-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="630" y="560" as="sourcePoint" />
+            <mxPoint x="790" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-8" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-5" target="0V17vzB8R0esJhWpNjQI-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="698" y="576" as="sourcePoint" />
+            <mxPoint x="650" y="637" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-14" value="Открыть настройки таймера" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="390" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-15" value="Открыть статистику" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414" y="740" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-16" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-15" target="_H8PyPT_IZnhRKHFAVXN-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="420" y="770" as="sourcePoint" />
+            <mxPoint x="580" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-17" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-2" target="_H8PyPT_IZnhRKHFAVXN-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="448" y="715" as="sourcePoint" />
+            <mxPoint x="330" y="641" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-18" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-14" target="_H8PyPT_IZnhRKHFAVXN-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="438" y="594" as="sourcePoint" />
+            <mxPoint x="320" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-19" value="Добавить новый таймер" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="720" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-20" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-19" target="0V17vzB8R0esJhWpNjQI-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="677" y="725" as="sourcePoint" />
+            <mxPoint x="580" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-21" value="Запустить таймер перерыва" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="970" y="615" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-23" value="Остановить таймер&lt;div&gt;перерыва&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="615" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-24" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-23" target="0V17vzB8R0esJhWpNjQI-21" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1138" y="576" as="sourcePoint" />
+            <mxPoint x="1030" y="632" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-25" value="Открыть графические настройки" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="320" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0V17vzB8R0esJhWpNjQI-27" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="0V17vzB8R0esJhWpNjQI-25" target="_H8PyPT_IZnhRKHFAVXN-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="445" y="562" as="sourcePoint" />
+            <mxPoint x="335" y="628" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-1" value="Задать цвет фона" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="190" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-2" value="Задать цвет кнопок" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="190" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-3" value="Задать время таймера работы" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-4" value="Задать время таймера перерыва" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="310" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-5" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.577;exitY=1.016;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="dVCtPD6kd5rjNyi6G3_Q-1" target="0V17vzB8R0esJhWpNjQI-25" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="290" y="430" as="sourcePoint" />
+            <mxPoint x="290" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-6" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="dVCtPD6kd5rjNyi6G3_Q-2" target="0V17vzB8R0esJhWpNjQI-25" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="191" y="341" as="sourcePoint" />
+            <mxPoint x="243" y="369" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-7" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.917;entryY=0.246;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="dVCtPD6kd5rjNyi6G3_Q-4" target="0V17vzB8R0esJhWpNjQI-14" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="365" y="268" as="sourcePoint" />
+            <mxPoint x="315" y="332" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dVCtPD6kd5rjNyi6G3_Q-8" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="dVCtPD6kd5rjNyi6G3_Q-3" target="0V17vzB8R0esJhWpNjQI-14" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="661" y="394" as="sourcePoint" />
+            <mxPoint x="588" y="417" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
