@@ -1,6 +1,6 @@
 import json
 import os
-
+import modules.timer
 import modules.storage_low_buisness_logic as storage_lbl
 
 
@@ -74,10 +74,21 @@ class ServiceStorage:
 
 
 class Storage:
+    # само хранилище, которое хранит статистику и список модов для таймера
+    # если создаётся с нуля, должно взять стандартный мод из конфига. статистику пустую(тоже из конфига?)
 
-    def __init__(self, statistic=1, list_modes=1):
-        self.__statistic = statistic
-        self.__list_modes = list_modes
+    def __init__(self, statistic=None, list_modes=None):
+        if not(statistic is None):
+            self.__statistic = statistic
+        else:
+            self.__statistic = storage_lbl.take_default_statistic()
+
+        if not(list_modes is None):
+            self.__list_modes = list_modes
+        else:
+            self.__list_modes = []
+            self.__list_modes.append(storage_lbl.take_standard_mode())
+
 
     def get_statistic(self):
         return self.statistic
