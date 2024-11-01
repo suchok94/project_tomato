@@ -1,6 +1,6 @@
 import json
 import os
-import configparser
+
 import modules.storage_low_buisness_logic as storage_lbl
 
 
@@ -11,18 +11,15 @@ class ServiceStorage:
 
     def __init__(self):
         # self.__storage = Storage()
-
-        config = configparser.ConfigParser()
-        config.read('config.ini')
-        path = config.get('Paths','storage_path')
-
-
-        if os.path.isfile(path):
-            self.__storage = self.load(path, 'json')
-        else:
-            self.__storage = ServiceStorage.create(self, path)
-
         self.__expansion = 'json'
+        self.__path = storage_lbl.take_path()
+
+        if os.path.isfile(self.__path):
+            self.__storage = self.load(self.__path, 'json')
+        else:
+            self.__storage = ServiceStorage.create(self, self.__path)
+
+
 
 
     def get_storage(self):
