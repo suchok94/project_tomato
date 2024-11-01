@@ -1,11 +1,13 @@
 import customtkinter as ctk
+import modules.storage as storage
 
 class App:
 
     def __init__(self):
+        self.service_storage = storage.ServiceStorage()
         self.root = ctk.CTk()
+        # self.storage = storage.Storage()
 
-        # self.service_storage = service_storage
         self.geometry = self.root.geometry("600x400")
         self.title = self.root.title("Tomato timer")
 
