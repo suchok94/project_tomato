@@ -81,7 +81,7 @@ class Storage:
         if not(statistic is None):
             self.__statistic = statistic
         else:
-            self.__statistic = storage_lbl.take_default_statistic()
+            self.__statistic = modules.timer.Statistic(*storage_lbl.take_default_statistic())
 
         if not(list_modes is None):
             self.__list_modes = list_modes
