@@ -45,11 +45,16 @@ def take_default_statistic():
     count_relax = config.get('DefaultStatistic', 'count_relax')
     count_work = config.get('DefaultStatistic', 'count_work')
     cycles = config.get('DefaultStatistic', 'cycles')
+
     return count_relax, count_work, cycles
 
 
 def take_standard_mode():
     config = configparser.ConfigParser()
     config.read('config.ini')
-    mode = config.get('StandardMode', 'Mode')
-    return mode
+    name = config.get('StandardMode', 'name')
+    time_work = config.get('StandardMode', 'time_work')
+    time_relax = config.get('StandardMode', 'time_relax')
+    time_long_relax = config.get('StandardMode', 'time_long_relax')
+
+    return name, time_work, time_relax, time_long_relax
