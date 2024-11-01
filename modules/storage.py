@@ -96,6 +96,9 @@ class Storage:
     def add_mode(self, mode):
         self.__list_modes.append(mode)
 
+    def get_list_modes(self):
+        return self.__list_modes
+
     def toJson(self):
         return json.dumps(self, default=lambda x: x.__dict__, sort_keys=True, indent=4)
 
