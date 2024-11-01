@@ -41,7 +41,7 @@ class ServiceStorage:
         return storage
 
 
-    def save(self, storage, expansion):
+    def save(self):
         '''
         сохраняет данные из 'storage' в файл с 'expansion'
         :param self:
@@ -49,8 +49,10 @@ class ServiceStorage:
         :return:
         '''
         if self.__expansion == 'json':
-            with open(self.__path, "w") as write_file:
-                json.dump(storage.toJson(), write_file)
+            storage_lbl.json_save(self.__storage, self.__path)
+
+        elif self.__expansion == 'txt':
+            storage_lbl.txt_save(self.__storage, self.__path)
 
 
     def load(self, path, expansion):
