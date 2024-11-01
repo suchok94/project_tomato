@@ -17,7 +17,9 @@ class ServiceStorage:
         if os.path.isfile(self.__path):
             self.__storage = self.load()
         else:
-            self.__storage = ServiceStorage.create(self)
+            self.create()
+
+        # как лучше через просто метод или через присвоение результата?
 
 
 
@@ -28,25 +30,23 @@ class ServiceStorage:
 
     def create(self):
         '''
-        создаёт новое хранилище, создавая объект класса Storage и сохраняя его в json файл
+        создаёт новое хранилище, создавая объект класса Storage и сохраняя его в файл с расширением json или txt
         :return:
         '''
-        storage = Storage()
+        self.__storage = Storage()
         if self.__expansion == 'json':
-            storage_lbl.json_save(storage, self.__path)
+            storage_lbl.json_save(self.__storage, self.__path)
 
         elif self.__expansion == 'txt':
-            storage_lbl.txt_save(storage, self.__path)
+            storage_lbl.txt_save(self.__storage, self.__path)
 
-        return storage
+        # может проверку убрать в нижнюю логику? передавая просто расширение файла
 
 
     def save(self):
         '''
         сохраняет данные из 'storage' в файл с 'expansion'
         :param self:
-        :param expansion:
-        :return:
         '''
         if self.__expansion == 'json':
             storage_lbl.json_save(self.__storage, self.__path)
