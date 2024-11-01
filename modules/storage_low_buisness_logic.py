@@ -17,8 +17,14 @@ def txt_save(storage, path):
 
 
 def json_save(storage, path):
-    with open(path, "w") as write_file:
-        json.dump(storage.toJson(), write_file)
+    if type(storage) is str:
+        with open(path, "w") as write_file:
+            json.dump(storage, write_file)
+    else:
+
+        with open(path, "w") as write_file:
+            json.dump(storage.toJson(), write_file)
+
 
 
 
@@ -36,8 +42,10 @@ def take_path(expansion):
 def take_default_statistic():
     config = configparser.ConfigParser()
     config.read('config.ini')
-    statistic = config.get('DefaultStatistic', 'Statistic')
-    return statistic
+    count_relax = config.get('DefaultStatistic', 'count_relax')
+    count_work = config.get('DefaultStatistic', 'count_work')
+    cycles = config.get('DefaultStatistic', 'cycles')
+    return count_relax, count_work, cycles
 
 
 def take_standard_mode():
