@@ -50,7 +50,7 @@ class Timer:
 
         elif self.__count_pomodoro % 1 != 0:
             phase = self.__mode.time_relax
-            phase_id = 3
+            phase_id = 1
 
         return phase, phase_id
 
