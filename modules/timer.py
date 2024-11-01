@@ -1,3 +1,5 @@
+import time
+
 class Mode:
 
     def __init__(self, name: str, time_work: int, time_relax:int, time_long_relax:int):
@@ -33,34 +35,73 @@ class Mode:
 
 class Timer:
 
-    def __init__(self, time: int = 0, mode: Mode):
+    def __init__(self, mode: Mode, time: int = 0):
         self.__time = time
         self.__mode = mode
         self.__count_pomodoro = 0
 
-    def start(self):
-        pass
+
+
+
+    def start_work(self):
+
+        self.__time = self.__mode.time_work
+
+        while self.__time:
+            time.sleep(1)
+            self.__time -= 1
+            print(self.__time)
+
+
+
+
+
+    def start_relax(self):
+        self.__time = self.__mode.time_relax
+
+        while self.__time:
+            time.sleep(1)
+            self.__time -= 1
+            print(self.__time)
+
+        self.__count_pomodoro += 1
+
+    def start_long_relax(self):
+        self.__time = self.__mode.time_long_relax
+        while self.__time:
+            time.sleep(1)
+            self.__time -= 1
+            print(self.__time)
+
 
     def stop(self):
-        pass
+        self.__time = 0
 
-    def get_time(self):
-        pass
+    @property
+    def time(self):
+        return self.__time
 
-    def set_time(self):
-        pass
+    @time.setter
+    def time(self, time: int):
+        self.__time = time
 
-    def set_mode(self):
-        pass
+    @property
+    def mode(self):
+        return self.__mode
 
-    def get_mode(self):
-        pass
+    @mode.setter
+    def mode(self, mode):
+        self.__mode = mode
 
-    def set_count(self):
-        pass
+    @property
+    def count(self):
+        return self.__count_pomodoro
 
-    def get_count(self):
-        pass
+    @count.setter
+    def set_count(self, count):
+        self.__count_pomodoro = count
+
+
 
 
 class Notification:
