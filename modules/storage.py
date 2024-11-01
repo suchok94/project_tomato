@@ -87,7 +87,7 @@ class Storage:
             self.__list_modes = list_modes
         else:
             self.__list_modes = []
-            self.__list_modes.append(storage_lbl.take_standard_mode())
+            self.__list_modes.append(modules.timer.Mode(*storage_lbl.take_standard_mode()))
 
 
     def get_statistic(self):
