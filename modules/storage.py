@@ -55,11 +55,11 @@ class ServiceStorage:
             storage_lbl.txt_save(self.__storage, self.__path)
 
 
-    def load(self, path, expansion):
-        if expansion == 'json':
-            data = storage_lbl.json_load(path)
-        elif expansion == 'txt':
-            data = storage_lbl.txt_load(path)
+    def load(self):
+        if self.__expansion == 'json':
+            data = storage_lbl.json_load(self.__path)
+        elif self.__expansion == 'txt':
+            data = storage_lbl.txt_load(self.__path)
 
         return data
 
