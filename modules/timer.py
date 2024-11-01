@@ -42,25 +42,31 @@ class Timer:
 
     def check_phase(self):
         phase = self.__mode.time_work
+        phase_id = 0
 
         if self.__count_pomodoro != 0 and self.__count_pomodoro % 4 == 0:
             phase = self.__mode.time_long_relax
+            phase_id = 2
 
         elif self.__count_pomodoro % 1 != 0:
             phase = self.__mode.time_relax
+            phase_id = 3
 
-        return phase
+        return phase, phase_id
 
     def start(self):
         phase = self.check_phase()
 
-        self.__time = phase
+        self.__time = phase[0]
         while self.__time:
             time.sleep(1)
             self.__time -= 1
             # выдаёт время на табло
 
+
         # выдаёт уведомление о окончании таймера
+        notification = Notification(phase[1])
+        notification.give_message()
 
         self.__count_pomodoro += 0.5
 
@@ -133,20 +139,29 @@ class Timer:
 
 
 class Notification:
+    # должен принимать id режима Mode и выдавать соответствующее уведомление
 
-    def __init__(self, mode:Mode):
-        self.__mode = mode
+    def __init__(self, phase_id: int):
+        self.__phase_id = phase_id
 
     def give_message(self):
-        pass
+        if self.__phase_id == 0:
+            pass # вывод сообщения что работа закончена
+        elif self.__phase_id == 1:
+            pass # вывод сообщения что отдых закончен
+        else:
+            pass # вывод сообщения что длинный отдых закончен
 
-    def set_mode(self):
-        pass
-
-    def get_mode(self):
-        pass
 
 
+
+    @property
+    def phase_id(self):
+        return self.__phase_id
+
+    @phase_id.setter
+    def phase_id(self, phase_id):
+        self.__phase_id = phase_id
 
 
 class Statistic:
