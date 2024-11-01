@@ -38,44 +38,72 @@ class Timer:
     def __init__(self, mode: Mode, time: int = 0):
         self.__time = time
         self.__mode = mode
-        self.__count_pomodoro = 0
+        self.__count_pomodoro = 0.0
 
+    def check_phase(self):
+        phase = self.__mode.time_work
 
+        if self.__count_pomodoro != 0 and self.__count_pomodoro % 4 == 0:
+            phase = self.__mode.time_long_relax
 
+        elif self.__count_pomodoro % 1 != 0:
+            phase = self.__mode.time_relax
 
-    def start_work(self):
+        return phase
 
-        self.__time = self.__mode.time_work
+    def start(self):
+        phase = self.check_phase()
 
+        self.__time = phase
         while self.__time:
             time.sleep(1)
             self.__time -= 1
-            print(self.__time)
+            # выдаёт время на табло
 
+        # выдаёт уведомление о окончании таймера
 
+        self.__count_pomodoro += 0.5
 
+        self.start()
 
-
-    def start_relax(self):
-        self.__time = self.__mode.time_relax
-
-        while self.__time:
-            time.sleep(1)
-            self.__time -= 1
-            print(self.__time)
-
-        self.__count_pomodoro += 1
-
-    def start_long_relax(self):
-        self.__time = self.__mode.time_long_relax
-        while self.__time:
-            time.sleep(1)
-            self.__time -= 1
-            print(self.__time)
+    # мусор
+    # def start_work(self):
+    #
+    #     self.__time = self.__mode.time_work
+    #
+    #     while self.__time:
+    #         time.sleep(1)
+    #         self.__time -= 1
+    #         print(self.__time)
+    #
+    #
+    #
+    #
+    #
+    # def start_relax(self):
+    #     self.__time = self.__mode.time_relax
+    #
+    #     while self.__time:
+    #         time.sleep(1)
+    #         self.__time -= 1
+    #         print(self.__time)
+    #
+    #     self.__count_pomodoro += 1
+    #
+    # def start_long_relax(self):
+    #     self.__time = self.__mode.time_long_relax
+    #     while self.__time:
+    #         time.sleep(1)
+    #         self.__time -= 1
+    #         print(self.__time)
 
 
     def stop(self):
         self.__time = 0
+
+    #??
+    # def pause(self):
+    #     pass
 
     @property
     def time(self):
