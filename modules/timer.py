@@ -59,10 +59,9 @@ class Timer:
 
         self.__time = phase[0]
         while self.__time:
-            time.sleep(1)
-            self.__time -= 1
             # выдаёт время на табло
-
+            self.__time -= 1
+            time.sleep(1)
 
         # выдаёт уведомление о окончании таймера
         notification = Notification(phase[1])
@@ -71,6 +70,8 @@ class Timer:
         self.__count_pomodoro += 0.5
 
         self.start()
+
+        # Нужно ли закцикливание? или делать запуск следуюзего таймера после notification?
 
     # мусор
     # def start_work(self):
@@ -151,8 +152,6 @@ class Notification:
             pass # вывод сообщения что отдых закончен
         else:
             pass # вывод сообщения что длинный отдых закончен
-
-
 
 
     @property
