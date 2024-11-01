@@ -1,22 +1,27 @@
 import json
 import os
 import configparser
+import customtkinter
 class App:
 
     def __init__(self, root):
         self.root = root
 
-        config = configparser.ConfigParser()
-        config.read('config.ini')
-        path = config.get('Paths','storage_path')
 
-        if os.path.isfile(path):
-            self.__storage = json.load()
-        else:
-            self.__storage = ServiceStorage.create(path)
 
-    def get_storage(self):
-        return self.__storage
+
+
+    #     config = configparser.ConfigParser()
+    #     config.read('config.ini')
+    #     path = config.get('Paths','storage_path')
+    #
+    #     if os.path.isfile(path):
+    #         self.__storage = json.load()
+    #     else:
+    #         self.__storage = ServiceStorage.create(path)
+    #
+    # def get_storage(self):
+    #     return self.__storage
 
 
 class ServiceStorage:
