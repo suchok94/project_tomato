@@ -32,3 +32,16 @@ def take_path(expansion):
         path = config.get('Paths', 'storage_path_txt')
 
     return path
+
+def take_default_statistic():
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    statistic = config.get('DefaultStatistic', 'Statistic')
+    return statistic
+
+
+def take_standard_mode():
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    mode = config.get('StandardMode', 'Mode')
+    return mode
