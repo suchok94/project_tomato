@@ -1,78 +1,24 @@
-import json
-import os
-import configparser
-import customtkinter
+import customtkinter as ctk
+
 class App:
 
-    def __init__(self, root):
-        self.root = root
-
-
-
-
-
-    #     config = configparser.ConfigParser()
-    #     config.read('config.ini')
-    #     path = config.get('Paths','storage_path')
-    #
-    #     if os.path.isfile(path):
-    #         self.__storage = json.load()
-    #     else:
-    #         self.__storage = ServiceStorage.create(path)
-    #
-    # def get_storage(self):
-    #     return self.__storage
-
-
-class ServiceStorage:
-
     def __init__(self):
-        pass
- # Нужен ли конструктор если все методы статичные?
+        self.root = ctk.CTk()
 
-    @staticmethod
-    def create(path):
-        '''
-        создаёт новое хранилище, создавая объект класса Storage и сохраняя его в json файл
-        :return:
-        '''
-        storage = Storage()
-        with open(path, "w") as write_file:
-            json.dump(storage.toJson(), write_file)
-        return storage
+        # self.service_storage = service_storage
+        self.geometry = self.root.geometry("600x400")
+        self.title = self.root.title("Tomato timer")
 
-    @staticmethod
-    def save(storage, expansion):
-        '''
-        сохраняет данные из 'storage' в файл с 'expansion'
-        :param self:
-        :param expansion:
-        :return:
-        '''
-        if expansion == 'json':
-            with open("storage.json", "w") as write_file:
-                json.dump(storage.toJson(), write_file)
+        # add widgets to app
+        self.button = ctk.CTkButton(self.root, text='Нажми меня!', command=self.button_click)
+        self.button.grid(row=0, column=0, padx=20, pady=10)
+        self.label = ctk.CTkLabel(self.root, text="CTkLabel", fg_color="transparent")
+        self.label.grid(row=0, column=1, padx=20, pady=10)
+        # add methods to app
 
-    @staticmethod
-    def load(expansion):
-        if expansion == 'json':
-            with open("storage.json", "r") as read_file:
-                data = read_file.read()
-            return json.load(data)
+    def button_click(self):
+        self.label.configure(text='новый текст')
 
 
 
-class Storage:
 
-    def __init__(self, statistic=1, list_modes=1):
-        self.__statistic = statistic
-        self.__list_modes = list_modes
-
-    def get_statistic(self):
-        return self.statistic
-
-    def add_mode(self, mode):
-        self.__list_modes.append(mode)
-
-    def toJson(self):
-        return json.dumps(self, default=lambda x: x.__dict__, sort_keys=True, indent=4)
